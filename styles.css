@@ -1,0 +1,189 @@
+/* Second Coat — INLS 572 Assignment 1
+   Palette: ink #2B1B2A, paper #F6EDF2, cherry #C0325C, plum #7B3F6B, butter #EBC24A */
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 0;
+  background-color: #F6EDF2;
+  color: #2B1B2A;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+main,
+.masthead,
+.colophon {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* Masthead */
+
+.masthead {
+  padding-bottom: 2rem;
+  border-bottom: 3px solid #2B1B2A;
+}
+
+.eyebrow {
+  margin: 0 0 1.25rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7B3F6B;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #C0325C;
+}
+
+.tagline {
+  margin: 1rem 0 1.75rem;
+  font-size: 1.25rem;
+  max-width: 28rem;
+}
+
+/* Five polish swatches, shaped like painted nails */
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(5, 3.25rem);
+  gap: 0.5rem;
+}
+
+.swatch {
+  height: 3.75rem;
+  border-radius: 1.6rem 1.6rem 0.7rem 0.7rem;
+  border-bottom: 3px solid #2B1B2A;
+}
+
+.swatch.one {
+  background-color: #C0325C;
+}
+
+.swatch.two {
+  background-color: #7B3F6B;
+}
+
+.swatch.three {
+  background-color: #EBC24A;
+}
+
+.swatch.four {
+  background-color: #E58BA6;
+}
+
+.swatch.five {
+  background-color: #F6EDF2;
+}
+
+/* Sections */
+
+.block {
+  padding: 2.75rem 0;
+  border-bottom: 1px solid #DFC6D3;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 1.1rem;
+}
+
+em {
+  font-style: italic;
+}
+
+.pullquote {
+  margin: 2rem 0 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid #EBC24A;
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+/* Audience cards */
+
+.who {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.35rem;
+  background-color: #FFFFFF;
+  border-left: 4px solid #C0325C;
+}
+
+h3 {
+  margin: 0 0 0.4rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #7B3F6B;
+}
+
+.who p {
+  margin: 0;
+}
+
+/* Lists */
+
+.assumptions,
+.plan {
+  margin: 0 0 1.1rem;
+  padding-left: 1.15rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+strong {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+/* Footer */
+
+.colophon {
+  padding: 2rem 0 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6B5566;
+}
+
+.colophon p {
+  margin: 0;
+}
+
+@media (min-width: 40rem) {
+  body {
+    padding-top: 4rem;
+  }
+
+  h1 {
+    font-size: 4.25rem;
+  }
+
+  .swatches {
+    grid-template-columns: repeat(5, 4rem);
+  }
+
+    .swatch {
+    height: 4.5rem;
+  }
+}
