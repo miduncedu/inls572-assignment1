@@ -1,20 +1,34 @@
-/* Second Coat — INLS 572 Assignment 1
-   Palette: ink #2B1B2A, paper #F6EDF2, cherry #C0325C, plum #7B3F6B, butter #EBC24A */
+/* Second Coat — INLS 572 Assignment 2
+   Color scheme defined as custom properties so it's easy to reuse/tweak */
+
+:root {
+  --ink: #2B1B2A;
+  --paper: #F6EDF2;
+  --cherry: #C0325C;
+  --plum: #7B3F6B;
+  --butter: #EBC24A;
+  --rose: #E58BA6;
+  --coral: #E8785C;
+  --card-bg: #FFFFFF;
+  --line: #DFC6D3;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Work Sans', Helvetica, Arial, sans-serif;
+}
 
 body {
   margin: 0;
   padding: 2.5rem 1.25rem 0;
-  background-color: #F6EDF2;
-  color: #2B1B2A;
-  font-family: Georgia, "Times New Roman", serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
   font-size: 1.0625rem;
   line-height: 1.65;
 }
 
+header,
 main,
-.masthead,
-.colophon {
-  max-width: 40rem;
+footer {
+  max-width: 44rem;
   margin: 0 auto;
 }
 
@@ -22,33 +36,48 @@ main,
 
 .masthead {
   padding-bottom: 2rem;
-  border-bottom: 3px solid #2B1B2A;
+  border-bottom: 3px solid var(--ink); /* technique: borders */
 }
 
-.eyebrow {
-  margin: 0 0 1.25rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #7B3F6B;
+.brandbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
 }
 
 h1 {
   margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 2.75rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
-  color: #C0325C;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--cherry);
+}
+
+nav a {
+  margin-left: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--plum);
+  text-decoration: none;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+nav a:hover {
+  color: var(--cherry);
 }
 
 .tagline {
   margin: 1rem 0 1.75rem;
-  font-size: 1.25rem;
-  max-width: 28rem;
+  font-size: 1.2rem;
+  max-width: 30rem;
 }
 
 /* Five polish swatches, shaped like painted nails */
@@ -61,105 +90,149 @@ h1 {
 
 .swatch {
   height: 3.75rem;
-  border-radius: 1.6rem 1.6rem 0.7rem 0.7rem;
-  border-bottom: 3px solid #2B1B2A;
+  border-radius: 1.6rem 1.6rem 0.7rem 0.7rem; /* technique: borders / shape */
+  border-bottom: 3px solid var(--ink);
 }
 
-.swatch.one {
-  background-color: #C0325C;
-}
-
-.swatch.two {
-  background-color: #7B3F6B;
-}
-
-.swatch.three {
-  background-color: #EBC24A;
-}
-
-.swatch.four {
-  background-color: #E58BA6;
-}
-
-.swatch.five {
-  background-color: #E8785C;
-}
+.swatch.one { background-color: var(--cherry); }
+.swatch.two { background-color: var(--plum); }
+.swatch.three { background-color: var(--butter); }
+.swatch.four { background-color: var(--rose); }
+.swatch.five { background-color: var(--coral); }
 
 /* Sections */
 
-.block {
+section {
   padding: 2.75rem 0;
-  border-bottom: 1px solid #DFC6D3;
+  border-bottom: 1px solid var(--line);
 }
 
 h2 {
   margin: 0 0 1rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 700;
 }
 
 p {
   margin: 0 0 1.1rem;
 }
 
-em {
-  font-style: italic;
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
-.pullquote {
-  margin: 2rem 0 0;
-  padding-left: 1.25rem;
-  border-left: 4px solid #EBC24A;
-  font-size: 1.2rem;
-  line-height: 1.45;
-}
-
-/* Audience cards */
-
-.who {
-  margin: 1.5rem 0;
-  padding: 1.25rem 1.35rem;
-  background-color: #FFFFFF;
-  border-left: 4px solid #C0325C;
-}
-
-h3 {
-  margin: 0 0 0.4rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.0625rem;
-  font-weight: 700;
-  color: #7B3F6B;
-}
-
-.who p {
+.hero-figure {
   margin: 0;
 }
 
-/* Lists */
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 3px solid var(--ink); /* technique: borders */
+  filter: saturate(1.08) contrast(1.04); /* technique: filter */
+  transition: filter 0.2s ease;
+}
 
-.assumptions,
-.plan {
-  margin: 0 0 1.1rem;
+.hero-figure img:hover {
+  filter: saturate(1.25) contrast(1.08) brightness(1.03);
+}
+
+.hero-figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--plum);
+  font-style: italic;
+}
+
+/* Quote banner: background image + gradient text overlay */
+
+.quote-banner {
+  background-image:
+    linear-gradient(0deg, rgba(43, 27, 42, 0.72), rgba(43, 27, 42, 0.5)),
+    url("images/hero.jpg"); /* technique: background image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.75rem;
+  border-bottom: none;
+  padding: 3.5rem 1.5rem;
+}
+
+.quote-overlay {
+  max-width: 30rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote-overlay p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--paper); /* text overlay on image */
+}
+
+/* Design preview cards */
+
+.card-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.25rem 1.4rem;
+  border-left: 4px solid var(--cherry); /* technique: borders */
+  background-image: linear-gradient(135deg, #ffffff, var(--paper)); /* technique: gradient */
+}
+
+.card h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--plum);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Watch / external links */
+
+.link-list {
+  margin: 0;
   padding-left: 1.15rem;
 }
 
-li {
-  margin-bottom: 0.5rem;
+.link-list li {
+  margin-bottom: 0.6rem;
 }
 
-strong {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
+.link-list a {
+  color: var(--cherry);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--butter); /* technique: borders */
+}
+
+.link-list a:hover {
+  color: var(--plum);
 }
 
 /* Footer */
 
 .colophon {
   padding: 2rem 0 3rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -172,18 +245,27 @@ strong {
 
 @media (min-width: 40rem) {
   body {
-    padding-top: 4rem;
+    padding-top: 3.5rem;
   }
 
   h1 {
-    font-size: 4.25rem;
+    font-size: 3.5rem;
   }
 
-  .swatches {
-    grid-template-columns: repeat(5, 4rem);
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
-    .swatch {
-    height: 4.5rem;
+  .hero-figure {
+    flex: 0 0 45%;
+  }
+
+  .hero-copy {
+    flex: 1;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

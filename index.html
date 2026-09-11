@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Second Coat: Purpose and Audience</title>
+  <title>Second Coat — Nail Art for Shaky Hands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header class="masthead">
-    <p class="eyebrow">INLS 572 &middot; Assignment 1</p>
-    <h1>Second Coat</h1>
+    <div class="brandbar">
+      <h1>Second Coat</h1>
+      <nav aria-label="Page sections">
+        <a href="#start-here">Start&nbsp;Here</a>
+        <a href="#designs">Designs</a>
+        <a href="#watch">Watch</a>
+      </nav>
+    </div>
     <p class="tagline">A nail art site for people like me who can&rsquo;t draw a straight line and have accepted that.</p>
     <div class="swatches" aria-hidden="true">
       <span class="swatch one"></span>
@@ -23,91 +32,75 @@
 
   <main>
 
-    <section class="block">
-      <h2>Purpose</h2>
-      <p>
-        I&rsquo;m building this site because every nail tutorial I&rsquo;ve tried to follow online
-        assumes I already have steady hands and a full drawer of tools. I don&rsquo;t. So this is
-        the site I actually wish I&rsquo;d had: a handful of designs that still look good even
-        when your hand shakes a little, done with regular polish and whatever&rsquo;s already in
-        my drawer.
-      </p>
-      <p>
-        I&rsquo;m keeping the scope small on purpose, mostly because I know myself and I&rsquo;ll
-        never finish this if I try to cover everything. No gel lamps, no acrylics, no reviewing
-        every brand of polish out there. Just the basics done properly, plus a few designs that
-        are forgiving of mistakes.
-      </p>
-      <p class="pullquote">
-        If a design needs a professional&rsquo;s hand to look right, it&rsquo;s not going on this site.
-      </p>
+    <section class="hero" id="start-here">
+      <figure class="hero-figure">
+        <img src="images/hero.jpg" alt="Close-up of freshly painted nails in cherry red and plum polish, drying on a linen napkin" width="1200" height="800">
+        <figcaption>Two coats, no gel lamp, dry in under twenty minutes.</figcaption>
+      </figure>
+      <div class="hero-copy">
+        <h2>Good nails don&rsquo;t require a steady hand</h2>
+        <p>
+          I started this site after ruining my fourth manicure in a row trying to freehand a
+          French tip I saw on a professional&rsquo;s page. It looked easy. It was not easy. What
+          actually fixed my nails wasn&rsquo;t more practice with a detail brush &mdash; it was
+          picking designs that hide a wobble instead of designs that show one off.
+        </p>
+        <p>
+          That&rsquo;s the whole idea behind Second Coat: every tutorial here is chosen because
+          it forgives mistakes, not because it photographs well. If a design needs a
+          professional&rsquo;s hand to look right, it doesn&rsquo;t make the cut.
+        </p>
+      </div>
     </section>
 
-    <section class="block">
-      <h2>Who this is for</h2>
-      <p>
-        I&rsquo;m mostly picturing three types of people reading this, because honestly I&rsquo;ve
-        been all three at different points:
-      </p>
-
-      <article class="who">
-        <h3>The first-timer</h3>
-        <p>
-          Owns two bottles of polish that both chip within a day and has a feeling they&rsquo;re
-          doing something wrong. They are. It&rsquo;s almost always the prep, not the
-          painting, and I&rsquo;ll get into that.
-        </p>
-      </article>
-
-      <article class="who">
-        <h3>The salon quitter</h3>
-        <p>
-          Used to get their nails done and wants to replicate that look at home without paying
-          salon prices every two weeks. This person needs real technique, not just encouragement.
-        </p>
-      </article>
-
-      <article class="who">
-        <h3>The once-in-a-while painter</h3>
-        <p>
-          Paints their nails maybe four times a year, always the night before something, always
-          rushing. Needs the fastest design that still looks like they tried.
-        </p>
-      </article>
-
-      <p>Whoever&rsquo;s reading, I&rsquo;m assuming they:</p>
-      <ul class="assumptions">
-        <li>don&rsquo;t own any specialty tools and aren&rsquo;t buying a kit just to try this</li>
-        <li>have maybe 30&ndash;60 minutes, not a whole free afternoon</li>
-        <li>are painting their dominant-hand nails with their non-dominant hand, like everyone</li>
-        <li>want it to actually last more than a day</li>
-      </ul>
+    <section class="quote-banner">
+      <div class="quote-overlay">
+        <p>&ldquo;It&rsquo;s almost always the prep, not the painting.&rdquo;</p>
+      </div>
     </section>
 
-    <section class="block">
-      <h2>What I'm planning to build</h2>
+    <section class="designs" id="designs">
+      <h2>What&rsquo;s coming to this site</h2>
       <p>
-        Here&rsquo;s roughly what I want the finished site to include, broken into pieces small
-        enough to read while a coat of polish dries:
+        This homepage is the first of three pages I&rsquo;m building for the class. The other
+        two will cover the actual how-tos, but here&rsquo;s a preview of what I&rsquo;m planning
+        so you know what to expect.
       </p>
-      <ul class="plan">
-        <li><strong>Start here.</strong> The five things worth actually owning, nothing more.</li>
-        <li><strong>Getting the base right.</strong> Prep, coats, cleanup, the stuff everyone skips.</li>
-        <li><strong>Five designs that forgive mistakes.</strong> My main how-tos, easiest first.</li>
-        <li><strong>When it goes wrong.</strong> Smudges, bubbles, chips, and how I fix them.</li>
-        <li><strong>Quick glossary.</strong> Top coat, cuticle oil, and the other terms I had to look up myself.</li>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Start-here basics</h3>
+          <p>The five supplies worth owning, and the two-minute prep routine that matters more than the polish you buy.</p>
+        </article>
+        <article class="card">
+          <h3>Five forgiving designs</h3>
+          <p>Jelly manicures, reverse gradients, and other looks that hide a shaky hand instead of showing one off.</p>
+        </article>
+        <article class="card">
+          <h3>When it goes wrong</h3>
+          <p>Smudges, bubbles, and chips &mdash; what caused them and how I actually fix them, not just cover them up.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="watch" id="watch">
+      <h2>Channels I actually learned from</h2>
+      <p>
+        None of this is original technique &mdash; I picked it up from people who&rsquo;ve been
+        painting nails a lot longer than I have. These are the channels I keep coming back to
+        when I&rsquo;m stuck:
+      </p>
+      <ul class="link-list">
+        <li><a href="https://www.youtube.com/@simplynailogical" target="_blank" rel="noopener">Simply Nailogical</a> &mdash; chaotic, but the prep advice is solid</li>
+        <li><a href="https://www.youtube.com/@cutepolish" target="_blank" rel="noopener">Cutepolish</a> &mdash; where I learned the reverse gradient</li>
+        <li><a href="https://www.youtube.com/@NailCareerEducation" target="_blank" rel="noopener">Nail Career Education</a> &mdash; more technical, good for troubleshooting</li>
       </ul>
-      <p>
-        I want the whole thing to read like I&rsquo;m talking to a friend, not like a manual. If
-        someone finishes their first manicure here and actually wants to try a second one, I&rsquo;ll
-        consider the site a success.
-      </p>
     </section>
 
   </main>
 
   <footer class="colophon">
-    <p>Assignment 1 &middot; INLS 572 Web Development &middot; Fall 2026</p>
+    <p>Assignment 2 &middot; INLS 572 Web Development &middot; Fall 2026</p>
   </footer>
 
 </body>
