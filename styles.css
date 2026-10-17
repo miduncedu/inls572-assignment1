@@ -1,4 +1,4 @@
-/* Second Coat — INLS 572 Assignment 1
+/* Second Coat — INLS 572 Assignment 4
    Palette: ink #2B1B2A, paper #F6EDF2, cherry #C0325C, plum #7B3F6B, butter #EBC24A */
 
 body {
@@ -269,6 +269,62 @@ figcaption {
   font-size: 1rem;
 }
 
+/* Home page: overall layout (grid) */
+
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 3rem;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.who-grid .who {
+  margin: 0;
+}
+
+/* Fixes page: overall layout (grid, sidebar on the left) */
+
+.fix-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 3rem;
+}
+
+.fix-sidebar {
+  padding-top: 2.75rem;
+}
+
+/* Fixes page: nested layout (flexbox inside the outer grid) */
+
+.fix-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.fix {
+  flex: 1 1 17rem;
+  padding: 1.25rem 1.35rem;
+  background-color: #FFFFFF;
+  border-left: 4px solid #7B3F6B;
+  scroll-margin-top: 1rem;
+}
+
+.fix p {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+.fix p:last-child {
+  margin: 0;
+}
+
 /* Footer */
 
 .colophon {
@@ -305,5 +361,38 @@ figcaption {
 @media (min-width: 52rem) {
   .layout {
     grid-template-columns: 2fr 1fr;
+  }
+
+  .home-layout {
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+      "purpose plan"
+      "audience audience";
+  }
+
+  .purpose {
+    grid-area: purpose;
+  }
+
+  .plan-section {
+    grid-area: plan;
+  }
+
+  .audience {
+    grid-area: audience;
+  }
+
+  .who-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fix-layout {
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .fix-sidebar {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
   }
 }
